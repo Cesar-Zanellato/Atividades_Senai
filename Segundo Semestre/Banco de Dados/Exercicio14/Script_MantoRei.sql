@@ -1,0 +1,39 @@
+drop database if exists dbMantoRei;
+
+create database dbMantoRei;
+
+use dbMantoRei;
+
+create table PRODUTO(
+	IDPRODUTO INT NOT NULL,
+    NOME_PRODUTO VARCHAR(100),
+    VARIACAO_PRODUTO CHAR(1),
+    PRECO VARCHAR(10),
+    TAMANHO VARCHAR(3),
+    MARCA VARCHAR(45),
+    primary key (IDPRODUTO)
+);
+
+create table CLIENTE(
+	IDCLIENTE INT NOT NULL,
+    NOME_CLIENTE VARCHAR(100),
+    CPF CHAR(11),
+    EMAIL VARCHAR(200),
+    SENHA VARCHAR(16),
+    primary key (IDCLIENTE)
+);
+
+create table CARRINHO(
+	IDCARRINHO INT NOT NULL,
+	IDCLIENTE INT NOT NULL,
+    primary key (IDCARRINHO, IDCLIENTE),
+    foreign key (IDCLIENTE) REFERENCES CLIENTE(IDCLIENTE)
+);
+
+create table CARRINHO_PRODUTO(
+	IDCARRINHO INT NOT NULL,
+	IDPRODUTO INT NOT NULL,
+    primary key (IDCARRINHO, IDPRODUTO),
+    foreign key (IDCARRINHO) REFERENCES CARRINHO(IDCARRINHO),
+    foreign key (IDPRODUTO) REFERENCES PRODUTO(IDPRODUTO)
+);

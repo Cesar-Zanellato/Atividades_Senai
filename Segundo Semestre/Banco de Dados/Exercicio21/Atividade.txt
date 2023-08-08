@@ -1,0 +1,2 @@
+Nesta atividade você deve enviar o projeto de banco de dados para a SA, você deve enviar o modelo conceitual, fisico e script.
+
