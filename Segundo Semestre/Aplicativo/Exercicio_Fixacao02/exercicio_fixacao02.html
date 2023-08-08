@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio Fixação 02</title>
+  </head>
+  <body>
+    <script>
+      class Animal {
+        
+
+        constructor(nome, comprimento, patas, cor, ambiente, velocidade) {
+          this.nome = nome;
+          this.comprimento = comprimento;
+          this.patas = patas;
+          this.cor = cor;
+          this.ambiente = ambiente;
+          this.velocidade = velocidade;
+        }
+
+        AlterarNome(nome) {
+          this.nome = nome;
+        }
+        AlterarComprimento(comprimento) {
+          this.comprimento = comprimento;
+        }
+        AlterarPatas(patas) {
+          this.patas = patas;
+        }
+        AlterarCor(cor) {
+          this.cor = cor;
+        }
+        AlterarAmbiente(ambiente) {
+          this.ambiente = ambiente;
+        }
+        AlterarVelocidade(velocidade) {
+          this.velocidade = velocidade;
+        }
+        Dados(animal){
+            console.log("Nome: " + this.nome + "\nComprimento: "+ this.comprimento)
+            //console.table(animal)
+        }
+      }
+
+      //Gato.Dados(Gato)
+      
+      
+      class Peixe extends Animal{
+        
+        constructor(nome, comprimento, patas, cor, ambiente, velocidade, caracteristica) {
+          super(nome, comprimento, patas, cor, ambiente, velocidade)
+          this.caracteristica = caracteristica;
+          
+        }
+        
+        AlterarCaracteristica(caracteristica) {
+          this.caracteristica = caracteristica;
+        }
+        BuscarCaracteristica() {
+          return this.caracteristica;
+        }
+        Dados(){
+          console.log("Nome: " + this.nome + "\nCaracteristicas: " + this.caracteristica)
+        }
+        
+      }
+      
+      let Gato = new Animal("Neguinha", 50, 4, "Preta/MarromEscuro", "terra", 150)
+
+      let Nemo = new Peixe("Nemo", 10000, 0, "Laranja/Preto", "Mar", 50, "jaivanowv")
+
+      Gato.Dados()
+      Nemo.Dados()
+
+      </script>
+  </body>
+  </html>
+  

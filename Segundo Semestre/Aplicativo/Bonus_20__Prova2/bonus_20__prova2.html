@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /*
+            O veterinário de um zoológico precisa de um sistema para guardar as informações dos animais para melhor eficiência do laboratório.
+
+            Crie um sistema para guardar as informações dos animais de um zoológico, o sistema deve ter classes para os animais, nas classes deve ter as características dos animais (Ex: nome, idade, patas e cor), além das características deve ter as ações dos animais.
+
+	        Depois teste o sistema adicionando 3 ou mais classes, as informações (atributos), as ações (métodos/funções). Além disso o sistema de fazer o animal reproduzir a ação que pertence a ele.
+
+            1.	Deve possuir pelo menos 2 classes [2,0];
+            2.	Cada classe deve possuir pelo menos 3 atributos [1,0]
+            3.	Cada classe deve possui pelo menos 2 métodos [1,0].
+            4.	Deve existir Herança em duas das classes [1,0].
+            5.	Deve instanciar pelo menos 1 objeto de cada classe [2,0]
+            6.	Deve chamar pelo menos um método de cada classe. Um com retorno de parâmetro e outro sem retorno [1,0] 
+            7.	O exemplo deve ser um contexto real. Não será aceito exemplos fictícios [1,0]. 
+
+        */
+
+
+        class Animal {
+
+            constructor(nome, idade, tamanho, patas, cor, ambiente, vivo){
+                
+                this.nome = nome;
+                this.idade = idade;
+                this.tamanho = tamanho;
+                this.patas = patas;
+                this.cor = cor;
+                this.ambiente = ambiente;
+                this.vivo = true;
+            }
+
+            AlterarCondicao(vivo){
+                this.vivo = false;
+            }
+            AlterarIdade(idade){
+                this.idade = idade;
+            }
+            ImprimirDados(){
+                console.log("Nome: " + this.nome + "\nIdade: " + this.idade + "\nTamanho: " + this.tamanho + "\nPatas: " + this.patas + "\nCor: " + this.cor + "\nAmbiente: " + this.ambiente)
+            }
+
+        }
+
+        class Felinos extends Animal {
+
+            constructor(nome, idade, tamanho, patas, cor, ambiente, vivo, velocidade){
+
+                super(nome, idade, tamanho, patas, cor, ambiente, vivo)
+                this.velocidade = velocidade;
+            }
+
+            AlterarCondicao(vivo){
+                this.vivo = false;
+            }
+            AlterarVelocidade(velocidade){
+                this.velocidade = velocidade;
+            }
+            ImprimirDados(){
+                console.log("Nome: " + this.nome + "\nIdade: " + this.idade + "\nTamanho: " + this.tamanho + "\nPatas: " + this.patas + "\nCor: " + this.cor + "\nAmbiente: " + this.ambiente + "\nVelocidade: " + this.velocidade)
+            }
+        }
+
+        class Aves extends Felinos {
+
+            constructor(nome, idade, tamanho, patas, cor, ambiente, vivo, velocidade,){
+
+                super(nome, idade, tamanho, patas, cor, ambiente, vivo, velocidade);
+                
+            }
+
+            AlterarCondicao(vivo){
+                this.vivo = false;
+            }
+            AlterarCor(cor){
+                this.cor = cor;
+            }
+            ImprimirDados(){
+                console.log("Nome: " + this.nome + "\nIdade: " + this.idade + "\nTamanho: " + this.tamanho + "\nPatas: " + this.patas + "\nCor: " + this.cor + "\nAmbiente: " + this.ambiente + "\nVelocidade: " + this.velocidade)
+            }
+        }
+
+        Girafa = new Animal("Melman", 15, "5.9m", 4, "Amarelo/Preto", "Terrestre", true)
+        Leao = new Felinos("Alex", 12, "2.1m", 4, "Amarelo/Marrom", "Terrestre", true, 80)
+        Arara = new Aves("Blu", 7, "25cm", 4, "Azul", "Aéreo", true, 80)
+
+        Girafa.AlterarIdade(16)
+        Girafa.ImprimirDados()
+        Leao.AlterarVelocidade(85)
+        Leao.ImprimirDados()
+        Arara.ImprimirDados()

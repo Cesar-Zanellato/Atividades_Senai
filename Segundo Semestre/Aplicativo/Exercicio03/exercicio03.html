@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio03</title>
+</head>
+<body>
+    
+    <script>
+
+
+class Ninja{
+
+constructor(nome, shuriken){
+
+    this.nome = nome;
+    this.shuriken = shuriken;
+    this.vivo = true;
+}
+
+atirarShuriken(inimigo){
+
+    if(this.shuriken > 0){
+
+        this.shuriken--;
+        console.log(this.nome + " atirou uma shuriken!" + "\nTem:" + this.shuriken + " Shurikens Sobrando.");
+        inimigo.vivo = false;
+
+      }else{
+
+          console.log(this.nome + " não tem mais shurikens")
+      }
+};
+};
+
+let Jiraiya = new Ninja("Jiraiya", 10);    
+let Obito = new Ninja("Obito", 10);
+
+Jiraiya.atirarShuriken(Obito);
+console.table(Jiraiya);
+console.table(Obito);
+
+    </script>
+
+
+</body>
+</html>
