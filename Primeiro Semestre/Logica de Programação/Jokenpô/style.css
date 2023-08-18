@@ -1,0 +1,223 @@
+html{
+
+    height: 100%;
+
+}
+
+body{
+
+    height: 100%;
+    margin: 0px;
+
+}
+
+#container{
+
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    
+}
+
+#top{
+
+    height: 15%;
+    width: 100%;
+    background-color: #DC7633;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#lbTitle{
+
+    color: whitesmoke;
+    font-size: 40px;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+
+}
+
+#middle{
+
+    height: 65%;
+    width: 100%;
+    background-color: #E59866;  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+#middleTop{
+
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.players{
+
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: 'Segoe UI';
+
+}
+
+#middleMiddle{
+
+    height: 55%;
+    width: 100%;
+    background-color: #E59866;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#left{
+
+    height: 100%;
+    width: 20%;
+
+}
+
+#middleM{
+
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+
+}
+
+#xis{
+
+    font-weight: bolder;
+    font-size: 85px;
+    font-family: 'Segoe UI';
+
+
+}
+
+#right{
+
+    height: 100%;
+    width: 20%;
+    
+}
+
+#middleBottom{
+
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.buttons{
+
+    height: 60px;
+    width: 200px;
+    margin: 20px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    border: solid 0px black;
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: 'Segoe UI';
+
+}
+
+
+
+#bottom{
+
+    height: 20%;
+    width: 100%;
+    background-color: #DC7633;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#bottomLeft{
+
+    height: 100%;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#bottomMiddle{
+
+    height: 100%;
+    width: 34%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#bottomRight{
+
+    height: 100%;
+    width: 33%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+#lbResult{
+
+    color: whitesmoke;
+    font-size: 35px;
+    font-family: 'Segoe UI';
+
+}
+
+#lbRounds{
+
+    color: whitesmoke;
+    font-size: 25px;
+    font-family: 'Segoe UI';
+
+}
+
+#lbPlayer{
+
+    color: whitesmoke;
+    font-size: 25px;
+    font-family: 'Segoe UI';
+
+}
+
+#lbSystem{
+
+    color: whitesmoke;
+    font-size: 25px;
+    font-family: 'Segoe UI';
+
+}
+
+#senaiLogo{
+
+    height: 60%;
+    width: 65%;
+
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoKenPô ʕ•́ᴥ•̀ʔっ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="container">
+
+        <audio id="backgroundMusic" src="../JoKenPô/sounds/blues.wav" loop></audio>
+        
+        <div id="top">
+
+            <label id="lbTitle">Bem-vindo ao JoKenPô ʕ•́ᴥ•̀ʔっ</label>
+
+        </div>
+
+        <div id="middle">
+
+            <div id="middleTop">
+
+                <label class="players">Jogador</label>
+                <label class="players">Sistema</label>
+
+            </div>
+
+            <div id="middleMiddle">
+
+                <div id="left">
+
+                </div>
+
+                <div id="middleM">
+
+                    <img id="framePlayer" onclick="changeImage()" src="../JoKenPô/img/frame-player.png">
+                    <label id="xis">X</label>
+                    <img id="frameSystem" src="../JoKenPô/img/frame-sistema.png">
+                    
+                </div>
+
+                <div id="right">
+                    
+                </div>
+                
+            </div>
+
+            <div id="middleBottom">
+
+                <button id="btnPlay" class="buttons" onclick="playGame()">Jogar</button>
+                <button id="btnRestart" class="buttons" onclick="restartGame()">Reiniciar</button>
+
+                <audio id="select" src="../JoKenPô/sounds/select.wav"></audio>
+                <audio id="confirm" src="../JoKenPô/sounds/confirm.wav"></audio>
+
+            </div>
+
+        </div>
+
+        <div id="bottom">
+
+            <div id="bottomLeft">
+
+                <label id="lbRounds">Rodadas = 0</label>
+                <label id="lbPlayer">Jogador = 0</label>
+                <label id="lbSystem">Sistema = 0</label>
+
+            </div>
+
+            <div id="bottomMiddle">
+                
+                <label id="lbResult">-> Resultado <-</label>
+            
+            </div>
+
+            <div id="bottomRight">
+
+                <img id="senaiLogo" src="../JoKenPô/img/Senai-Logo.png">
+            
+            </div>
+    
+        </div>
+
+    </div>
+
+    <script src="jokenpo.js"></script>
+
+</body>
+</html>
