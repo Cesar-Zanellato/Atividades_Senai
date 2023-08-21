@@ -1,0 +1,89 @@
+html {
+
+    height: 100%;
+
+}
+
+body {
+
+    height: 100%;
+    margin: 0px;
+    /* background-color: rgb(83, 83, 83); */
+}
+
+#container {
+
+    height: 100%;
+    background-color: rgb(161, 161, 161);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#topo {
+
+    height: 10%;
+    width: 100%;
+    background-color: rgb(0, 102, 128);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+#meio {
+    height: 90%;
+    width: 100%;
+    background-color: rgb(5, 52, 207);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+#meio-cima {
+    height: 50%;
+    width: 100%;
+    background-color: rgb(172, 172, 172);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+}
+.lbl {
+    font-size: 2rem;
+
+}
+
+.inp {
+    height: 10%;
+    background-color: rgb(141, 96, 12);
+}
+
+#meio-baixo {
+    height: 50%;
+    width: 100%;
+    background-color: rgb(206, 122, 161);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn{
+
+    height: 10%;
+    width: 10%;
+    background-color: rgb(21, 97, 5);
+
+}
+
+#baixo{
+    height: 10%;
+    width: 100%;
+    background-color: rgb(21, 92, 158);
+
+}

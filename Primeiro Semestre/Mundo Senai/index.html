@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoKenpô</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="container">
+        
+        <div id="cima">
+            
+            <label id="lbTitulo">Bem-vindo ao JoKenpô!</label>
+            
+        </div>
+        
+        <div id="meio">
+            
+            <div id="meio-cima">
+                
+                <label class="lbPlayers">Jogador</label>
+                <label id="lbRodadas">[ Rodadas ]</label>
+                <label class="lbPlayers">Sistema</label>
+
+            </div>
+
+            <div id="meio-meio">
+
+                <img id="imgJogador" onclick="trocaImagem()" src="img/frame-player.png" >
+                <label id="xis">X</label>
+                <img id="imgSistema" src="img/frame-sistema.png" >
+
+            </div>
+
+            <div id="meio-baixo">
+
+                <button id="btnJogar" class="btn" onclick="Jogar() "  >Jogar</button>
+                <button id="btnReiniciar" class="btn" onclick="Reiniciar()">Reiniciar</button>
+
+            </div>
+
+        </div>
+
+        <div id="baixo">
+            
+            <div id="baixo-esquerda">
+
+                <label id="lbJogadorPts" class="lbBaixoEsquerda">Jogador = 0</label>
+                <label id="lbSistemaPts" class="lbBaixoEsquerda">Sistema = 0</label>
+
+            </div>
+
+            <div id="baixo-meio">
+
+                <label id="lbResultado">[ Resultado ]</label>
+
+            </div>
+
+            <div id="baixo-direita">
+
+                <img id="senaiLogo" src="img/Senai-Logo.png" >
+
+                <audio id="somConfirma" src="audio/confirm.wav" ></audio>
+                <audio id="somSeleciona" src="audio/select.wav"></audio>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="jokenpo.js"></script>
+</body>
+</html>

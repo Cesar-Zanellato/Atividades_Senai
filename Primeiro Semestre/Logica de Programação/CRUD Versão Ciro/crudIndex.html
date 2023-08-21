@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="crudStyle.css">
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="topo">
+
+            <h1>SISTEMA CRUD</h1>
+
+        </div>
+
+        <div id="meio">
+
+            <div id="meio-cima">
+                <label class="lbl">Nome</label>
+                <input class="inp" id="inpCadastro">
+                <label class="lbl">Excluir</label>
+                <input class="inp" id="inpExcluir">
+                <label class="lbl">Editar</label>
+                <input class="inp" id="inpEditar">
+                <label class="lbl">Verificar</label>
+                <input class="inp" id="inpVerificar">
+
+
+            </div>
+
+            <div id="meio-baixo">
+                <button class="btn" onclick="Cadastro()">CADASTRO</button>
+                <button class="btn" onclick="Excluir()">EXCLUIR</button>
+                <button class="btn" onclick="Editar()">EDITAR</button>
+                <button class="btn" onclick="Verificar()">VERIFICAR</button>
+                <button class="btn" onclick="Lista()">LISTA</button>  
+
+            </div>
+
+        </div>
+
+        <div id="baixo">
+
+
+        </div>
+
+    </div>
+<script src="crudSite.js"></script>
+</body>
+
+</html>
