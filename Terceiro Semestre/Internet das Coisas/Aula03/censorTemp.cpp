@@ -2,6 +2,8 @@
 #define DHTPIN 14     // Digital pin connected to the DHT sensor
 #define DHTTYPE DHT11   // DHT 11
 DHT dht(DHTPIN, DHTTYPE);
+
+// Mudar Modo M ou m, Mudar tempMax A ou a, Mudar histeresse H ou h
 //Manual = 0 Automatico = 1
 int modo = 1;
 
@@ -43,6 +45,15 @@ void loop() {
   if(modo == 0){
     Serial.println(" Modo Manual");
   }
+
+  if(modo == 1){
+    if(t > tempMax){
+        digitalWrite(25, 1);
+    }
+    if(t < tempMax - histerese){
+        digitalWrite(25, 0);
+    }
+  }
   
   if(Serial.available()){
     recebido = Serial.read();
@@ -66,16 +77,6 @@ void loop() {
         modo = 0;
     }
 
-    if(modo == 1){
-
-        if(t > tempMax){
-          digitalWrite(25, 1);
-        }
-        if(t < tempMax - histerese){
-          digitalWrite(25, 0);
-        }
-   
-    }
     if(modo == 0){
         if(recebido == 'B') {
           digitalWrite(25, 1);
@@ -84,7 +85,6 @@ void loop() {
           digitalWrite(25, 0);
         }
     }
-    
 
     Serial.println(recebido);
   }
