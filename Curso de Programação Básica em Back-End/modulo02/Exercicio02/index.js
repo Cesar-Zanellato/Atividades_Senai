@@ -63,11 +63,18 @@ app.put("/livros/:id", (req, res) => {
         (livro) => livro.id === parseInt(req.params.id, 10)
     );
 
+    // const livro = livros.findById(req.params.id, function (error, usuario){
+    //     if(error){
+    //       res.send(error);
+    //     };
+    //     res.json(livro);
+    //   });
+
     if(!livro){
         res
             .status(404)
             .send("Não foi possível encontrar o livro solicitado");
-    };
+    }
 
     const { error } = validarLivro(req.body);
     if(error){
@@ -75,7 +82,7 @@ app.put("/livros/:id", (req, res) => {
             .status(400)
             .send(error.details[0].message);
         return
-    };
+    }
 
     livro.titulo = req.body.titulo;
     res.send(livro);
@@ -91,7 +98,7 @@ app.delete("livros/:id", (req, res) => {
         res
             .status(404)
             .send("Não foi possível encontrar o livro solicitado");
-    };
+    }
 
     const index = livros.indexOf(livro);
     livros.splice(index, 1);
