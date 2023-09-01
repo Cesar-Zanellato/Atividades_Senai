@@ -1,35 +1,23 @@
-// var express = require("express");
-// const app = express();
-// app.use(express.json());
-
-// app.get("/", function (req, res) {
-//     console.log("Requisição GET recebida para a rota URI /");
-//     res.send("Seja bem-vindo à rota principal (/)!");
+// const { MongoClient, ServerApiVersion } = require('mongodb');
+// const uri = "mongodb+srv://Cesar:<Cesar123.>@cluster0.jidrbfh.mongodb.net/?retryWrites=true&w=majority";
+// // Create a MongoClient with a MongoClientOptions object to set the Stable API version
+// const client = new MongoClient(uri, {
+//   serverApi: {
+//     version: ServerApiVersion.v1,
+//     strict: true,
+//     deprecationErrors: true,
+//   }
 // });
-
-// app.post("/adicionar", function (req, res) {
-//     console.log("Requisição POST recebida para a rota URI /adicionar");
-//     res.send("Seja bem-vindo à rota de adicionar (/adicionar)!");
-// });
-
-// app.put("/atualizar", function (req, res) {
-//     console.log("Requisição PUT recebida para a rota URI /atualizar");
-//     res.send("Seja bem-vindo à rota de atualizar (/atualizar)!");
-// });
-
-// app.delete("/deletar", function (req, res) {
-//     console.log("Requisição DELETE recebida para a rota URI /deletar");
-//     res.send("Seja bem-vindo à rota de deletar (/deletar)!");
-// });
-
-// app.get("/listar", function (req, res) {
-//     console.log("Requisição GET recebida para a rota URI /listar");
-//     res.send("Seja bem-vindo à rota de listagem (/listar)!");
-// });
-
-// //A porta é uma variável de ambiente
-// const porta = process.env.PORT || 8080;
-
-// app.listen(porta, () =>
-//     console.log("Servidor inicializado na porta: " + porta)
-// );
+// async function run() {
+//   try {
+//     // Connect the client to the server	(optional starting in v4.7)
+//     await client.connect();
+//     // Send a ping to confirm a successful connection
+//     await client.db("admin").command({ ping: 1 });
+//     console.log("Pinged your deployment. You successfully connected to MongoDB!");
+//   } finally {
+//     // Ensures that the client will close when you finish/error
+//     await client.close();
+//   }
+// }
+// run().catch(console.dir);
