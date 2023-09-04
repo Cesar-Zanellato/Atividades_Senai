@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/styles.css">
+    <title>Contato</title>
+</head>
+<body> 
+<div class="conteudo">
+    <!-- Inicio do cabeçalho -->
+    <header>
+        <section class="linha">
+            <img src="../IMG/logo.png" alt="logo" width="200px"/>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="inicio.html">Início</a>
+                    </li>
+                    <li>
+                        <a href="contato.html"><button type="button" class="botao">Contato</button></a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <main>
+        <section class="sobre">
+            <article class="rotulo">
+                <h1>Contato</h1>
+                <h2>Landing Page</h2>
+                <p>
+                    Preencha os dados abaixo e envie sua mensagem de contato.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto magni fuga delectus commodi vitae est sit quasi voluptates soluta, nisi vero ducimus fugit eaque dignissimos reprehenderit sint nemo rerum hic.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto magni fuga delectus commodi vitae est sit quasi voluptates soluta, nisi vero ducimus fugit eaque dignissimos reprehenderit sint nemo rerum hic.
+                </p>
+            </article>
+            <fieldset>
+                <legend>
+                    <h5>Dados de Contato</h5>
+                </legend>
+                <form id="frmInscricao" action="contato.php" method="post">
+
+                    <div class="agrupamento">
+                        <label>Nome:</label>
+                        <input type="text" class="entrada" required="required" id="textNome" maxlength="100" size="50">
+                    </div>
+                    <div class="agrupamento">
+                        <label>Data de Nascimento:</label>
+                        <input type="date" class="entrada" required="required" id="textDataNascimento">
+                    </div>
+                    <div class="agrupamento">
+                        <label>Celular:</label>
+                        <input type="tel" class="entrada" required="required" id="textCelular" size="50" placeholder="(##) #####-####" maxlength="15">
+                    </div>
+                    <div class="agrupamento">
+                        <label>E-Mail:</label>
+                        <input type="email" class="entrada" required="required" id="textEmail" size="50">
+                    </div>
+                    <div class="agrupamento">
+                        <label >Mensagem:</label>
+                        <textarea cols="50" class="entrada" rows="5" required="required"></textarea>
+                    </div>
+
+                    <div class="agrupamento-butao">
+                        <input id="btnEnviar" class="botao" class="mensagem" type="submit" value="Enviar">
+                    </div>
+                </form>
+            </fieldset>
+        </section>
+    </main>
+
+    <!-- Inicio do Rodapé -->
+    <footer >
+        <ul class="linha">
+            <li class="rotulo">
+                <a href="#">
+                    <img src="../IMG/logo-insta.png" alt="instagram"/>
+                </a>
+            </li>
+            <li class="rotulo">
+                <a href="#">
+                    <img src="../IMG/logo-twitter.png" alt="twitter"/>
+                </a>
+            </li>
+            <li class="rotulo">
+                <a href="#">
+                    <img src="../IMG/logo-facebook.png" alt="facebook"/>
+                </a>
+            </li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>

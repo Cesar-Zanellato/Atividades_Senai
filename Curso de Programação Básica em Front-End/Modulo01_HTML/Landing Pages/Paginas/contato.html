@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+</head>
+<body> 
+    <!-- Inicio do cabeçalho -->
+    <header>
+        <section>
+            <img src="../IMG/logo.png" alt="logo" width="200px"/>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="inicio.html">Início</a>
+                    </li>
+                    <li>
+                        <a href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <main>
+        <section>
+            <article>
+                <h1>Formulário de Contato</h1>
+                <p>
+                    Preencha os dados abaixo e envie sua mensagem de contato.
+                </p>
+                <fieldset>
+                    <legend>
+                        <h5>Dados de Contato</h5>
+                    </legend>
+                    <form id="frmInscricao" action="" method="post">
+
+                        <label>Nome:</label><br>
+                        <input type="text" required="required" id="textNome" maxlength="100" size="50"><br><br>
+
+                        <label>Data de Nascimento:</label><br>
+                        <input type="date" required="required" id="textDataNascimento"><br><br>
+
+                        <label>Sexo:</label><br>
+                        <input type="radio" name="rdoSexo" id="M" required="required">
+                        <label>Masculino</label> 
+                        <input type="radio" name="rdoSexo" id="F" required="required">
+                        <label>Feminino</label><br><br>
+
+                        <label>Endereço:</label>
+                        <input type="text" required="required" id="textLogradouro" maxlength="100" size="50"><br><br>
+                        <label>Estado:</label>
+                        <select id="cbxEstado" required="required">
+                            <option value="">-Selecione-</option>
+                            <option value="1">SC</option>
+                            <option value="2">MG</option>
+                        </select><br><br>
+
+                        <label>Cidade:</label>
+                        <select id="cbxCidade" required="required">
+                            <option value="">-Selecione-</option>
+                            <option value="1">Florianópolis</option>
+                            <option value="2">Uberlândia</option>
+                        </select><br><br> 
+
+                        <label>Celular:</label>
+                        <input type="tel" required="required" id="textCelular" size="50" placeholder="(##) #####-####" maxlength="15"><br><br>
+
+                        <label>E-Mail:</label>
+                        <input type="email" required="required" id="textEmail" size="50"><br><br>
+
+                        <label>Áreas de interesse:</label><br>
+                        <input type="checkbox" name="chkAreasInteresse" value="HTML">
+                        <label>HTML</label>
+                        <input type="checkbox" name="chkAreasInteresse" value="CSS">
+                        <label>CSS</label>
+                        <input type="checkbox" name="chkAreasInteresse" value="JavaScript">
+                        <label>JavaScript</label><br><br>
+                        
+                        
+                        <label>Mensagem</label><br><br>
+                        <textarea cols="50" rows="5" required="required"></textarea>
+                    
+                        <input id="btnEnviar" type="submit" value="Enviar">
+                    </form>
+                </fieldset>
+            </article>
+        </section>
+    </main>
+
+    <!-- Inicio do Rodapé -->
+    <footer>
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="../IMG/logo-insta.png" alt="instagram"/>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../IMG/logo-twitter.png" alt="twitter"/>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../IMG/logo-facebook.png" alt="facebook"/>
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
