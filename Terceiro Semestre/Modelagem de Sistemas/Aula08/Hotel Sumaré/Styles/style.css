@@ -6,6 +6,7 @@
     list-style: none;
     vertical-align: baseline;
     font-weight: 300;
+    background-color: #FBFFDB;
 
 
 }
@@ -13,7 +14,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #FBFFDB;
 }
 header section{
     display: flex;
