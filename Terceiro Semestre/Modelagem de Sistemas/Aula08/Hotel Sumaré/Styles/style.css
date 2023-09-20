@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inika&display=swap');
+
 
 *{
     margin: 0;
@@ -14,6 +16,7 @@
     display: flex;
     flex-direction: column;
     background-color: #FBFFDB;
+    /* background-color: black; */
 }
 header section{
     display: flex;
@@ -42,12 +45,15 @@ header ul{
 header ul li a{
     margin: 0px 2px;
     color: #003146;
-    padding: 10px;
+    padding: 0 10px 0 10px;
+    background: transparent;
+    display: block;
+    font-size: 18px;
 }
 header ul li a:hover{
-    background-color: #ADB27C;
+    border-bottom: 4px solid #0A4761;
+    transition: 0.1s;
 }
-
 main section{
     display: flex;
     align-items: center;
@@ -55,8 +61,24 @@ main section{
     margin-top: 2%;
 }
 main .propaganda{
-    height: 400px;
-    width: 300px;
+    height: 27vmax;
+    width: 20vmax;
     background-color: #FFF3D2;
+    border-radius: 2vmax;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+main img{
+    height: 17vmax;
+    width: 20.5vmax;
+    position: relative;
+    right: 4px;
     border-radius: 2vmax 2vmax 0 0;
+}
+.textP{
+    margin: 0.5vmax 0 0 1vmax ;
+    text-align: left;
+    font-size: 23px;
+}
+main p{
+    font-family: "Inika", serif;
 }
