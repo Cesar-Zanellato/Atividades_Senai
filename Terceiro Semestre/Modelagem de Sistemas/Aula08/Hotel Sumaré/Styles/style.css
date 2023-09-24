@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inika&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 
 *{
     margin: 0;
@@ -8,15 +8,12 @@
     list-style: none;
     vertical-align: baseline;
     font-weight: 300;
-    
-    
 }
 .container{
     width: 100%;
     display: flex;
     flex-direction: column;
     background-color: #FBFFDB;
-    /* background-color: black; */
 }
 header section{
     display: flex;
@@ -31,13 +28,16 @@ header div{
     align-items: center;
     justify-content: center;
 }
+header img{
+    width: 13vmax;
+}
 hr{
     height: 10px;
     width: 100%;
     background-color: #003146;
 }
 header ul{
-    height: 40px;
+    height: 2.5vmax;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -48,7 +48,7 @@ header ul li a{
     padding: 0 10px 0 10px;
     background: transparent;
     display: block;
-    font-size: 18px;
+    font-size: 1.5vmax;
 }
 header ul li a:hover{
     border-bottom: 4px solid #0A4761;
@@ -59,9 +59,10 @@ main section{
     align-items: center;
     justify-content: space-evenly;
     margin-top: 2%;
+    margin-bottom: 5%;
 }
 main .propaganda{
-    height: 27vmax;
+    height: 29vmax;
     width: 20vmax;
     background-color: #FFF3D2;
     border-radius: 2vmax;
@@ -74,11 +75,53 @@ main img{
     right: 4px;
     border-radius: 2vmax 2vmax 0 0;
 }
-.textP{
-    margin: 0.5vmax 0 0 1vmax ;
-    text-align: left;
-    font-size: 23px;
+article{
+    display: flex;
 }
 main p{
     font-family: "Inika", serif;
+}
+.textP{
+    margin: 0.5vmax 0 0 1.5vmax;
+    text-align: left;
+    font-size: 1.8vmax;
+    line-height: 200%;
+    max-height: max-content;
+}
+.btn{
+    height: 3vmax;
+    width: 18vmax;
+    margin: 0 0vmax 0 1vmax;
+    border-radius: 1.2vmax;
+    background: #A3E154;
+
+    color: #003146;
+    text-align: center;
+    font-family: "Inika", serif;
+    font-size: 2.3vmax;
+}
+
+footer section{
+    background-color: #000F15;
+    display: flex;
+}
+footer article{
+    height: 10vmax;
+    width: 35vmax;
+    color: #FBFFDB;
+    font-family: 'Inter', sans-serif;
+    font-size: 2vmax;
+    margin: 3vmax 0 0 2vmax;
+}
+.linha{
+    display: flex;
+    flex-direction: row;
+    margin-left : 30vmax;
+}
+footer ul li{
+    margin: 4vmax 0 0 2vmax;
+}
+footer ul li a img{
+    height: 5vmax;
+    width: 5vmax;
 }
