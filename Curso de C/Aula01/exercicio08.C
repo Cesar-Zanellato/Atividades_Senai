@@ -19,3 +19,14 @@ If you want to improve the variable names, then do so, but remember that variabl
 Expected output
 Localhost IP is 127.0.0.1
 */
+#include <stdio.h>
+
+int main()
+{
+	int ipPart1 = 027;
+	int ipPart2 = 0;
+	int ipPart3 = 0;
+	int ipPart4 = 1;
+
+	printf("Localhost IP is %d.%d.%d.%d\n", ipPart1, ipPart2, ipPart3, ipPart4);
+}
