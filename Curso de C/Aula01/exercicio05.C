@@ -1,30 +1,30 @@
 /*
-Level of difficulty
-Easy
+Nível de dificuldade
+Fácil
 
-Objectives
-Familiarize the student with:
+Objectivos
+Familiarize o aluno com:
 
-Fixing errors in a program
-Integer numbers
-Base 8 numbers
-Printing on screen
-Scenario
-Check the program in the editor. Find all possible compilation errors and logic errors. Fix them.
+Corrigindo erros em um programa
+Números inteiros
+Base 8 números
+Impressão na tela
+Cenário
+Confira o programa no editor. Encontre todos os possíveis erros de compilação e erros lógicos. Corrija-os.
 
-Your version of the program must print the same result as the expected output. Before you use the compiler, try to find the errors only by manual code analysis.
+Sua versão do programa deve imprimir o mesmo resultado que a saída esperada. Antes de usar o compilador, tente localizar os erros somente pela análise manual de código.
 
-Use octal (base 8) numbers.
+Use números octais (base 8).
 
-Expected output
+Produção esperada
 The value of nine is: 9 
-The value of ten is: 10
+The value of ten is: 10 
 */
 #include <stdio.h>
 
 int main()
 {
-	printf("The value of nine is: %d \n", 8+1);
-	printf("The value of ten is: %d \n", 5*2);
+	printf("The value of nine is: %o \n", 9);
+	printf("The value of ten is: %o \n", 010);
 	return 0;
 }

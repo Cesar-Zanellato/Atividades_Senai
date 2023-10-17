@@ -1,19 +1,19 @@
 /*
-Level of difficulty
-Easy
+Nível de dificuldade
+Fácil
 
-Objectives
-Familiarize the student with:
+Objectivos
+Familiarize o aluno com:
 
-Fixing errors in a program
-Integer numbers
-Printing on screen
-Scenario
-Check the program in the editor. Find all possible compilation errors and logic errors. Fix them.
+Corrigindo erros em um programa
+Números inteiros
+Impressão na tela
+Cenário
+Confira o programa no editor. Encontre todos os possíveis erros de compilação e erros lógicos. Corrija-os.
 
-Your version of the program must print the same result as the expected output. Before you use the compiler, try to find the errors only by manual code analysis.
+Sua versão do programa deve imprimir o mesmo resultado que a saída esperada. Antes de usar o compilador, tente localizar os erros somente pela análise manual de código.
 
-Expected output
+Produção esperada
 The value of five is: 5
 */
 #include <stdio.h>

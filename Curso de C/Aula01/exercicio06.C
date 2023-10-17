@@ -1,23 +1,23 @@
 /*
-Level of difficulty
-Easy
+Nível de dificuldade
+Fácil
 
-Objectives
-Familiarize the student with:
+Objectivos
+Familiarize o aluno com:
 
-Fixing errors in a program
-Variable names
-Integer numbers
-Printing on screen
-Scenario
-Check the program in the editor. Find all possible compilation errors and logic errors. Fix them.
+Corrigindo erros em um programa
+Nomes de variáveis
+Números inteiros
+Impressão na tela
+Cenário
+Confira o programa no editor. Encontre todos os possíveis erros de compilação e erros lógicos. Corrija-os.
 
-Your version of the program must print the same result as the expected output. Before you use the compiler, try to find the errors only by manual code analysis.
+Sua versão do programa deve imprimir o mesmo resultado que a saída esperada. Antes de usar o compilador, tente localizar os erros somente pela análise manual de código.
 
-If you want to improve the variable names, then do so, but remember that variable names have to be as descriptive as possible, and also as short as possible.
+Se você quiser melhorar os nomes das variáveis, faça isso, mas lembre-se de que os nomes das variáveis devem ser o mais descritivos possível e também os mais curtos possíveis.
 
-Expected output
-The value of ten is: 10 
+Produção esperada
+The value of ten is: 10  
 */
 #include <stdio.h>
 
