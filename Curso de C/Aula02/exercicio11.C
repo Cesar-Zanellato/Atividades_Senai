@@ -1,25 +1,24 @@
-// LAB
+/*
+Nível de dificuldade
+Fácil
 
-// Level of difficulty
-// Easy
+Objectivos
+Familiarize o aluno com:
 
-// Objectives
-// Familiarize the student with:
+Corrigindo erros em um programa
+Fazendo contas simples com operadores, variáveis e números
+Ordem das operações
+Uso de parênteses para alterar a ordem das operações
+Impressão na tela
+Cenário
+Confira o programa no editor. Encontre todos os possíveis erros de compilação e erros lógicos. Corrija-os, mas não altere nenhum valor numérico.
 
-// Fixing errors in a program
-// Doing simple math with operators, variables and numbers
-// Order of operations
-// Use of parentheses to change the order of operations
-// Printing on screen
-// Scenario
-// Check the program in the editor. Find all possible compilation errors and logic errors. Fix them, but do not change any numeric values.
+No entanto, você pode usar parênteses (você pode adicioná-los ou removê-los). Sua versão do programa deve imprimir o mesmo resultado que a saída esperada. Antes de usar o compilador, tente localizar os erros somente pela análise manual de código.
 
-// However, you can use parentheses (you can add or remove them). Your version of the program must print the same result as the expected output. Before you use the compiler, try to find the errors only by manual code analysis.
-
-// Expected output
-// the result is: 20
-// the small result is: 5
-
+Produção esperada
+the result is: 20
+the small result is: 5
+*/
 #include <stdio.h>
 
 int main()

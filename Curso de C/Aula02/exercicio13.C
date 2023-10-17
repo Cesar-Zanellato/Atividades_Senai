@@ -1,23 +1,23 @@
+/*
+Nível de dificuldade
+Fácil
 
-// Level of difficulty
-// Easy
+Objectivos
+Familiarize o aluno com:
 
-// Objectives
-// Familiarize the student with:
+Fazendo contas simples com operadores, variáveis e números
+Ordem das operações
+Impressão na tela
+Cenário
+Complete o programa no editor. Calcule a quantidade acumulada de dinheiro com um valor inicial de 100 e uma taxa de juros anual de 1,5%. Calcule e imprima os resultados dos três primeiros anos.
 
-// Doing simple math with operators, variables and numbers
-// Order of operations
-// Printing on screen
-// Scenario
-// Complete the program in the editor. Compute the accrued amount of money with a starting value of 100 and an annual interest rate of 1.5%. Compute and print the results for the first three years.
+Sua versão do programa deve imprimir o mesmo resultado que a saída esperada para cada ano. Calcule cada valor anual com base no valor do ano anterior.
 
-// Your version of the program must print the same result as the expected output for each year. Compute each annual value on the basis of the previous year's value.
-
-// Expected output
-// After first year: 101.500000
-// After second year: 103.022499
-// After third year: 104.544998
-
+Produção esperada
+After first year: 101.500000
+After second year: 103.022499
+After third year: 104.544998
+*/
 #include <stdio.h>
 
 int main()

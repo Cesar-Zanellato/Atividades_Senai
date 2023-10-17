@@ -1,20 +1,22 @@
-// Level of difficulty
-// Easy
+/*
+Nível de dificuldade
+Fácil
 
-// Objectives
-// Familiarize the student with:
+Objectivos
+Familiarize o aluno com:
 
-// Fixing errors in a program
-// Floating-point numbers
-// Printing on screen
-// Scenario
-// Check the program in the editor. Find all possible compilation errors and logic errors. Fix them.
+Corrigindo erros em um programa
+Números de ponto flutuante
+Impressão na tela
+Cenário
+Confira o programa no editor. Encontre todos os possíveis erros de compilação e erros lógicos. Corrija-os.
 
-// Your version of the program must print the same result as the expected output. Before you use the compiler, try to find the errors only by manual code analysis. Later, you can use the constant value of Pi.
+Sua versão do programa deve imprimir o mesmo resultado que a saída esperada. Antes de usar o compilador, tente localizar os erros somente pela análise manual de código. Posteriormente, você pode usar o valor constante de Pi.
 
-// Expected output
-// The value of half is: 0.500000
-// The value of Pi is: 3.141593
+Produção esperada
+The value of half is: 0.500000
+The value of Pi is: 3.141593
+*/
 
 #include <stdio.h>
 

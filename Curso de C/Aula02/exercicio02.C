@@ -1,22 +1,24 @@
-// Level of difficulty
-// Easy
+/*
+Nível de dificuldade
+Fácil
 
-// Objectives
-// Familiarize the student with:
+Objectivos
+Familiarize o aluno com:
 
-// Fixing errors in a program
-// Floating point numbers
-// Printing on screen
-// Scenario
-// Check the program in the editor. Find all possible compilation errors and logic errors. Fix them.
+Corrigindo erros em um programa
+Números de ponto flutuante
+Impressão na tela
+Cenário
+Confira o programa no editor. Encontre todos os possíveis erros de compilação e erros lógicos. Corrija-os.
 
-// Your version of the program must print the same result as the expected output. Once you have fixed the errors, remove all the unnecessary characters from the code. Check which characters may be left without triggering an error.
+Sua versão do programa deve imprimir o mesmo resultado que a saída esperada. Depois de corrigir os erros, remova todos os caracteres desnecessários do código. Verifique quais caracteres podem ser deixados sem disparar um erro.
 
-// Before you use the compiler, try to find the errors only by manual code analysis.
+Antes de usar o compilador, tente localizar os erros somente pela análise manual de código.
 
-// Expected output
-// The value of nine is: 9.000000
-// The value of ten is: 10.000000
+Produção esperada
+The value of nine is: 9.000000
+The value of ten is: 10.000000
+*/
 
 #include <stdio.h>
 

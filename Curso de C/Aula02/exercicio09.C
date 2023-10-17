@@ -1,25 +1,26 @@
-// Level of difficulty
-// Easy
+/*
+Nível de dificuldade
+Fácil
 
-// Objectives
-// Familiarize the student with:
+Objectivos
+Familiarize o aluno com:
 
-// Using operators,
-// Building simple expressions,
-// Translating verbal description into programming language
-// Scenario
-// Take a look at the code we've provided in the editor: it assigns two integer values, manipulates them and finally outputs the result and bigresult variables.
+Usando operadores,
+Construindo expressões simples,
+Traduzindo a descrição verbal para a linguagem de programação
+Cenário
+Dê uma olhada no código que fornecemos no editor: ele atribui dois valores inteiros, manipula-os e, finalmente, produz as variáveis e .resultbigresult
 
-// The problem is that the manipulations have been described using natural language, so the code is completely useless now.
+O problema é que as manipulações foram descritas usando linguagem natural, então o código é completamente inútil agora.
 
-// We want you to act as an intelligent (naturally!) compiler and to translate the formula into a real "C" code notation.
+Queremos que você atue como um compilador inteligente (naturalmente!) e traduza a fórmula em uma notação de código "C" real.
 
-// Test your code using the data we've provided.
+Teste seu código usando os dados que fornecemos.
 
-// Expected output
-// result: 38
-// big result: 54872
-
+Produção esperada
+result: 38
+big result: 54872
+*/
 	/* 
 		increment xValue by 3
 		decrement yValue by xValue
@@ -51,8 +52,6 @@ int main(void)
  	bigResult = result * result * result;
  	result += xValue * yValue;
  	
-    printf("xValue: %d\n", xValue);	
-    printf("yValue: %d\n", yValue);	
 	printf("result: %d\n", result);
 	printf("big result: %d\n", bigResult);
 	return 0;
