@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>Cadastro de Filmes</title>
     <link rel="stylesheet" href="estilo.css">
+    <script defer="true" src="funcoes.js"></script>
   <body>
     <div id="paginaPrincipal">
         <div class="mainPage">
@@ -21,7 +22,7 @@
                 </div>
                 <div id="divTitulo" class="campo-formulario">
                     <label id="labelTitulo">Título:</label>
-                    <input id="titulo" type="text" class="input-formulario" value="">
+                    <input id="titulo" type="text" onkeydown="validarTitulo(event)" class="input-formulario" value="">
                 </div>
                 <div id="divSubtitulo" class="campo-formulario">
                     <label id="labelSubtitulo" >Subtitulo:</label>
@@ -29,7 +30,7 @@
                 </div>
                 <div id="divDiretor"  class="campo-formulario">
                     <label id="labelDiretor" >Diretor:</label>
-                    <input id="diretor" type="text" class="input-formulario" value="">
+                    <input id="diretor" type="text" class="input-formulario input-data" value="">
                 </div>
                 <div id="divAcoes" class="acoes">
                     <button id="limpar">Limpar</button>
@@ -37,6 +38,6 @@
                 </div>
             </div>
         </div>
-    </div>s
+    </div>
   </body>
 </html>
