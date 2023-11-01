@@ -1,0 +1,132 @@
+#include <Arduino.h>
+#include "HX711.h"
+#include "soc/rtc.h"
+#include <Servo.h>
+#include <ArduinoJson.h>
+#include "EspMQTTClient.h"
+
+
+// Esquema de conexão do HX711
+const int LOADCELL_DOUT_PIN = 26;
+const int LOADCELL_SCK_PIN = 25;
+const int pinoServo = 32;
+Servo s; //OBJETO DO TIPO SERVO
+int pos;
+char json_peso[100];
+int valor_peso;
+float weight = 0.0;
+//configurações da conexão MQTT
+
+EspMQTTClient client(
+"FIESC_IOT", // Nome da rede sem fio no qual o esp32 irá se conectar
+"C6qnM4ag81", // Senha da rede sem fio
+"mqtt.tago.io", // IP ou domínio do servidor Broker MQTT - usar “mqtt.tago.io”
+"PetFeeder", // Nome do usuário - colocar o nome do token
+"7d94a202-f537-4ab4-9b9a-e3c66c28170d", // Colocar o token do dispositivo (device) criado no TagoIO
+"TestClient", // Nome único do cliente para identificar o dispositivo
+1883 // Porta do protocolo MQTT, valor padrão é 1883
+);
+
+HX711 scale;
+    
+void setup(){
+  s.attach(pinoServo); //ASSOCIAÇÃO DO PINO DIGITAL AO OBJETO DO TIPO SERVO
+  s.write(180); //INICIA O MOTOR NA POSIÇÃO 0º;
+  delay(2000);
+  s.write(0);  
+  Serial.begin(115200);
+  Serial.println("HX711 Demo");
+
+  Serial.println("Inicializando a balança");
+
+  scale.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN);
+
+  Serial.println("Antes de configurar a balança:");
+  Serial.print("leitura: \t\t");
+  Serial.println(scale.read());      // imprime a leitura bruta do ADC
+
+  Serial.print("obter unidades: \t\t");
+  Serial.println(scale.get_units(2), 1);  // imprime a média de 5 leituras do ADC menos o peso da tara (não definido) dividido
+                                          // pelo parâmetro de escala (ainda não definido)
+            
+  scale.set_scale(434.242);
+  //scale.set_scale(-471.497);                      // esse valor é obtido calibrando a balança com pesos conhecidos; consulte o README para detalhes
+  scale.tare();               // redefine a balança para 0
+
+  Serial.println("Depois de configurar a balança:");
+
+  Serial.print("leitura: \t\t");
+  Serial.println(scale.read());                 // imprime a leitura bruta do ADC
+  
+  Serial.print("obter unidades: \t\t");
+  Serial.println(scale.get_units(5), 1);        // imprime a média de 5 leituras do ADC menos o peso da tara, dividido
+                                                // pelo parâmetro de escala definido com set_scale
+  Serial.println("Leituras:"); 
+}
+void ativarMotorServo() {
+  for (pos = 100; pos < 180; pos++) {
+    s.write(pos);
+    delay(15);
+  }
+  delay(100);
+  for (pos = 180; pos >= 100; pos--) {
+    s.write(pos);
+    delay(15);
+  }
+
+}
+
+void converte_json()
+{
+  StaticJsonDocument<300> sjson_peso;
+
+  sjson_peso["variable"] = "peso";
+  sjson_peso["value"] = weight;
+  serializeJson(sjson_peso, json_peso);
+}
+
+void envia_msg()
+{
+  client.publish("node/pso", json_peso); // You can activate the retain flag by setting the third parameter to true
+}
+
+void leituraBalanca (){
+
+  weight = scale.get_units(5);  // Lê o peso do sensor HX711
+  Serial.print("uma leitura:\t");
+  Serial.print(scale.get_units(), 1);
+  Serial.println(weight);
+
+  scale.power_down();             // coloca o ADC no modo de suspensão
+  delay(2000);
+  scale.power_up();
+
+  
+  if (weight < 20) { 
+    Serial.println("ATIVA");
+   ativarMotorServo();
+  }
+  else
+    Serial.println("DESATIVA");
+  delay(1000);
+}
+void loop(){
+
+leituraBalanca();
+converte_json();
+envia_msg();
+delay(50);
+client.loop();
+}
+void processa_msg(const String payload)
+  {
+  StaticJsonDocument<300> msg;
+  }
+
+ void onConnectionEstablished()
+{
+   client.subscribe("node/status", [] (const String &payload)  {
+   Serial.println(payload);
+   processa_msg(payload);
+  });
+}
