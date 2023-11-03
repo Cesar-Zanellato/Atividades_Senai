@@ -23,3 +23,30 @@ StudentA      4.20       4.50       4.20       4.30
 StudentB      4.30       4.40       4.70       4.47
 StudentC      4.30       4.80       4.90       4.67
 */
+#include <stdio.h>
+
+int main()
+{
+	float ano1EstudanteA = 4.2;
+	float ano2EstudanteA = 4.5;
+	float ano3EstudanteA = 4.2;
+    float mediaEstudanteA = ((ano1EstudanteA + ano2EstudanteA + ano3EstudanteA) / 3);
+	
+	float ano1EstudanteB = 4.3;
+	float ano2EstudanteB = 4.4;
+	float ano3EstudanteB = 4.7;
+    float mediaEstudanteB = ((ano1EstudanteB + ano2EstudanteB + ano3EstudanteB) / 3);
+
+	float ano1EstudanteC = 4.3;
+	float ano2EstudanteC = 4.8;
+	float ano3EstudanteC = 4.9;
+    float mediaEstudanteC = ((ano1EstudanteC + ano2EstudanteC + ano3EstudanteC) / 3);
+
+
+	printf("Nome Estudante     1°Ano           2°Ano           3°Ano          Media\n");
+	printf("EstudanteA          %.2f            %.2f            %.2f           %.2f\n", ano1EstudanteA, ano2EstudanteA, ano3EstudanteA, mediaEstudanteA);
+	printf("EstudanteB          %.2f            %.2f            %.2f           %.2f\n", ano1EstudanteB, ano2EstudanteB, ano3EstudanteB, mediaEstudanteB);
+	printf("EstudanteC          %.2f            %.2f            %.2f           %.2f\n", ano1EstudanteC, ano2EstudanteC, ano3EstudanteC, mediaEstudanteC);
+	
+	return 0;
+}
