@@ -1,19 +1,23 @@
 /*
-Note que o formato contém quase exclusivamente especificadores – três deles para ser exato. Isso significa que você precisa entregar três argumentos para o formato.
+Agora vamos mostrar-lhe um programa simples, mas completo, que faz o seguinte:
 
-Em nosso exemplo no editor, isso é feito repetindo o mesmo nome de variável três vezes – está correto em todos os aspectos.
-
-A execução deste programa produzirá a mesma variável (ou, mais precisamente, seu valor: ) três vezes – uma vez como um número decimal, uma vez como um número hexadecimal e uma vez como um número octal.31
-
-Como resultado, a tela mostrará a seguinte cadeia de caracteres:
-
-31 1f 37
+solicita que o usuário insira um único valor inteiro;
+quadra-o;
+imprime o resultado com um comentário apropriado.
+Nós garantimos que analisar este programa não deve ser qualquer problema para você
 */
 #include <stdio.h>
 
-int main(void) {
-    int i;
-    i = 31;
-    printf("%d %x %o", i, i, i);
+int main(void)
+{
+    int value, square;
+
+    printf("Give me a number and I will square it!\n");
+    scanf("%d", &value);
+    
+    square = value * value;
+    
+    printf("You've given me: %d\n", value);
+    printf("The squared value is: %d\n", square);
     return 0;
 }

@@ -6,65 +6,70 @@ Objectivos
 Familiarize o aluno com:
 
 Obtendo dados do usuário
+Validando a entrada
+Processamento dos dados
 Imprimindo dados em diferentes formatos
 Corrigindo erros em um programa
 Cenário
-Escreva um programa que peça ao usuário um dia e um mês (valores inteiros separados para ambos). Em seguida, ele deve imprimir o número do dia do ano para o dia e mês determinados.
+Escreva um programa que imprima o nome de um determinado dia da semana. Seu programa deve imprimir o mesmo resultado que a saída esperada. Essa tarefa é semelhante ao laboratório anterior, mas desta vez você precisa obter o dia da semana do usuário e validar a entrada.
 
-Suponha que o ano é um ano bissexto (fevereiro tem 29 dias). Seu programa deve imprimir o mesmo resultado que a saída esperada.
-
-Teste o programa por dias de meses diferentes. Suponha que a entrada do usuário é válida.
+Teste o programa para todos os dias da semana (adicione código para imprimir uma mensagem ao usuário quando ele / ela entra em um dia inválido da semana).
 
 Entrada de amostra
-1
 1
 
 Saída de amostra
-Dias no ano: 1
+O dia da semana é: Segunda-feira
 
 Entrada de amostra
-31
-1
-
-Saída de amostra
-Dias no ano: 31
-
-Entrada de amostra
-29
 2
 
 Saída de amostra
-Dias no ano: 60
+O dia da semana é: Terça-feira
 
 Entrada de amostra
-31
-12
+9
 
 Saída de amostra
-Dias no ano: 366
+Não existe esse dia: 9. O valor de entrada deve ser de 0 a 6.
 */
 #include <stdio.h>
 
 int main(void){
 
-    int diasNoMes; 
-    int meses;
+    int valorInserido;
 
-    printf("Quantos dias os meses tem:\n");
-    scanf("%d", &diasNoMes);
-    printf("Quantos meses tem:\n");
-    scanf("%d", &meses);
+    printf("Insira um valor de 0 a 6 para indentificar o dia da semana.\n");
+    scanf("%d", &valorInserido);
 
-    int qtdeDiasAno = (diasNoMes * meses);
+    switch (valorInserido){
 
-    if(meses == 12){
-        qtdeDiasAno -= 6;
+        case 0: 
+            printf("O dia da semana é: Domingo");
+            break;
+        case 1: 
+            printf("O dia da semana é: Segunda-Feira");
+            break;
+        case 2: 
+            printf("O dia da semana é: Terça-Feira");
+            break;
+        case 3: 
+            printf("O dia da semana é: Quarta-Feira");
+            break;
+        case 4: 
+            printf("O dia da semana é: Quinta-Feira");
+            break;
+        case 5: 
+            printf("O dia da semana é: Sexta-Feira");
+            break;
+        case 6: 
+            printf("O dia da semana é: Sábado");
+            break;
+        
+        default:
+            printf("Não existe esse dia: %d. O valor de entrada deve ser de 0 a 6.", valorInserido);
+            break;
     }
-    if(diasNoMes == 29){
-        qtdeDiasAno += meses;
-    }
-
-    printf("Dias no ano: %d\n", qtdeDiasAno);
 
     return 0;
 }
