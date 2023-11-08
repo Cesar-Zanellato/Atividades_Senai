@@ -8,30 +8,45 @@ Familiarize o aluno com:
 Imprimindo dados em diferentes formatos
 Corrigindo erros em um programa
 Cenário
-De acordo com a ISO 8601, muitos países usam o formato de data AAAA-MM-DD, onde AAAA é um ano de quatro dígitos, MM significa um mês de dois dígitos e DD significa um dia de dois dígitos (uma letra significa nenhum zero à esquerda). As convenções locais podem variar e, às vezes, incluem formatos como DD-MM-AAAA ou DD-MM-AAAA.
+Você tem os dados (incluídos no código) das notas de três alunos (, , ). Escreva um programa para imprimir esses dados em linhas - a primeira linha é um cabeçalho no formato:StudentAStudentBStudentC
 
-Sua tarefa é imprimir valores em quatro formatos diferentes. Confira o programa no editor.
+Student name  1stYGrade  2ndYGrade  3rdYGrade  Avg
 
-Encontre todos os possíveis erros de compilação e erros lógicos. Corrija-os, mas não altere nenhum valor de caractere. Sua versão do programa deve imprimir o mesmo resultado que a saída esperada.
+As três linhas seguintes contêm: nome do aluno (, , é suficiente), nota () e a média dessas três séries (). Sua versão do programa deve imprimir o mesmo resultado que a saída esperada. StudentAStudentBStudentC1stYGrade 2ndYGrade 3rdYGradeAvg
 
-Antes de usar o compilador, tente localizar os erros somente pela análise manual de código.
+Para imprimir apenas dois dígitos de um número de ponto flutuante, use o especificador de formato e, para preenchê-lo com espaços, você pode usar o especificador de formato, onde 9 é o comprimento do número e dos espaços."%.2f""%9.2f"
 
 Produção esperada
-2016-02-20 - YYYY-MM-DD format - ISO 8601
-02-20-2016 - MM-DD-YYYY format
-20-02-2016 - DD-MM-YYYY format
-20-2-2016 - D-M-Y format
+
+Student name  1stYGrade  2ndYGrade  3rdYGrade  Avg
+StudentA      4.20       4.50       4.20       4.30
+StudentB      4.30       4.40       4.70       4.47
+StudentC      4.30       4.80       4.90       4.67
 */
 #include <stdio.h>
 
 int main()
 {
-	int day = 20;
-	int month = 2;
-	int year = 2016;
-	printf("%d-0%d-%d - YYYY-MM-DD format - ISO 8601\n", year, month, day);
-	printf("0%d-%d-%d - MM-DD-YYYY format\n", day, month, year);
-	printf("%d-0%d-%d - DD-MM-YYYY format\n", month, day, year);
-	printf("%d-%d-%d - D-M-Y format\n", day, month, year);
+	float ano1EstudanteA = 4.2;
+	float ano2EstudanteA = 4.5;
+	float ano3EstudanteA = 4.2;
+    float mediaEstudanteA = ((ano1EstudanteA + ano2EstudanteA + ano3EstudanteA) / 3);
+	
+	float ano1EstudanteB = 4.3;
+	float ano2EstudanteB = 4.4;
+	float ano3EstudanteB = 4.7;
+    float mediaEstudanteB = ((ano1EstudanteB + ano2EstudanteB + ano3EstudanteB) / 3);
+
+	float ano1EstudanteC = 4.3;
+	float ano2EstudanteC = 4.8;
+	float ano3EstudanteC = 4.9;
+    float mediaEstudanteC = ((ano1EstudanteC + ano2EstudanteC + ano3EstudanteC) / 3);
+
+
+	printf("Nome Estudante     1°Ano           2°Ano           3°Ano          Media\n");
+	printf("EstudanteA          %.2f            %.2f            %.2f           %.2f\n", ano1EstudanteA, ano2EstudanteA, ano3EstudanteA, mediaEstudanteA);
+	printf("EstudanteB          %.2f            %.2f            %.2f           %.2f\n", ano1EstudanteB, ano2EstudanteB, ano3EstudanteB, mediaEstudanteB);
+	printf("EstudanteC          %.2f            %.2f            %.2f           %.2f\n", ano1EstudanteC, ano2EstudanteC, ano3EstudanteC, mediaEstudanteC);
+	
 	return 0;
 }
