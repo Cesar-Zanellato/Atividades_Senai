@@ -4,7 +4,11 @@ function detalharFuncionario(funcionario) {
 
 function detalharFuncionarioComDestructuring(funcionario) {
     const {nome, cargo, salario} = funcionario;
-    console.log(`${nome} atua no cargo de ${cargo} e recebe um salário de R$ ${salario}`);
+    console.log(`${nome} atua no cargo de ${cargo} e recebe um salário de ${formatarValor(salario)}`);
+}
+
+function formatarValor(valor) {
+    return `R$ ${valor},00`;
 }
 
 const funcionario = {

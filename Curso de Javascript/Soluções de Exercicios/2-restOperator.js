@@ -1,4 +1,7 @@
 function calcularValores(operacao, ...numeros) {
+    //let total = operacao === 'soma' ? 0 : 1;
+    //for (i = 0;i<numeros.length;i++) {
+    console.log(numeros);
     let total = numeros[0];
     for (i = 1;i<numeros.length;i++) {
         if (operacao === 'soma') {

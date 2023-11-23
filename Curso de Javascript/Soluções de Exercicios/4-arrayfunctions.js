@@ -1,11 +1,12 @@
-const clonarFuncionario = pesssoa => {
-    const funcionarioClonado = { ...pesssoa, nome: 'Leo', idade: 35 }
-    console.log("Novo funcionário: " + funcionarioClonado);
+const clonarFuncionario = pessoa => {
+    return { ...pessoa, nome: 'Leo', idade: 35 }
 }
 
-const clonarFuncionarioComParametros = (pesssoa, novoNome, novaIdade) => {
-    const funcionarioClonado = { ...pesssoa, nome: novoNome, idade: novaIdade }
-    console.log("Novo funcionário: " + funcionarioClonado);
+const clonarFuncionarioComRetornoSemBloco = pessoa => ({ ...pessoa, nome: 'Leo', idade: 35 })
+
+const clonarFuncionarioComParametros = (pessoa, novoNome, novaIdade) => {
+    const funcionarioClonado = { ...pessoa, nome: novoNome, idade: novaIdade }
+    return funcionarioClonado;
 }
 
 const calcularValores = (operacao, ...numeros) => {
