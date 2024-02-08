@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    background-color: rgb(22, 22, 22);
+}
+
+.pPessoa{
+    background-color: darkgray;
+    /* margin: 1vmin; 
+    margin: 2vmax; */
+    margin: 10px;
+    width: 10vmin;
+    width: 30vmax;
+    border: 2px solid;
+    border-radius: 1vmin;
+    text-rendering: auto;
+}

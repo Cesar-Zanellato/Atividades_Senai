@@ -1,0 +1,8 @@
+
+
+receita = {
+    nome: "",
+    ingredientes: [],
+    modoPreparo: ""
+};
+
