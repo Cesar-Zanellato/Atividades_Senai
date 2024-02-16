@@ -7,8 +7,40 @@
     <title>Receita</title>
 </head>
 <body>
-    
+    <header>
+        <section>
+            <article>
+                <h1 id="tituloPagina">Receitas</h1>
+            </article>
+            <div>
+                <button onclick="mostrarCadastro()" id="btnCadastrar">Cadastrar</button>
+                <button onclick="mostrarPesquisa()" id="btnPesquisar">Pesquisar</button>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section id="corpoPaginaCadastro" style="display: block;">
+            <article>
+                <h2>Cadastrar Receita</h2>
+            </article>
+            <div id="corpoReceitas">
+                <label name="labelNome">Nome da Receita:</label>
+                <input name="inputNome" type="text">
+                <label name="labelModoPreparo">Modo de Preparo:</label>
+                <input name="inputModoPreparo" type="text">
+                <textarea name="textarea" cols="30" rows="10"></textarea>
+            </div>
+            <div>
+                <button onclick="cadastrarReceita()">+</button>
+            </div>
+        </section>
+        <section id="corpoPaginaPesquisa" style="display: none;">
+            <h2>Pesquisar Receita</h2>
+        </section>
+    </main>
+    <footer>
 
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

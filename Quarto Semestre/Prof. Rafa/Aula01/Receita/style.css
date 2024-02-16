@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100%;
+    width: 100%;
+    
+}
+
+header{
+    height: 170px;
+    background-color: rgb(26, 32, 32);
+}
+header section{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+header section div{
+    flex-direction: row;
+}
+header article h1{
+   font-size: 50px; 
+   color: chocolate;
+}
+header button{
+    background-color: chocolate;
+    margin: 10px;
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+}
+header button:hover{
+    height: 60px;
+    width: 110px;
+    cursor: pointer;
+}
+main{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+main section div button{
+    height: 40px;
+    width: 80px;
+    margin-top: 1%;
+    cursor: pointer;
+    /* position: relative; */
+}
