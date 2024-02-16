@@ -8,15 +8,15 @@ receita = {
 
 let pagina = document.getElementById("corpoReceitas");
 
-cadastrarReceita();
+receita();
 
-function cadastrarReceita(){
+function receita(){
     let receita = document.createElement("div");
-    let lbNome = document.getElementsByName("labelNome");
-    let iptNome = document.getElementsByName("inputNome");
-    let lbModoPreparo = document.getElementsByName("labelModoPreparo");
-    let iptModoPreparo = document.getElementsByName("inputModoPreparo");
-    let txtIngredientes = document.getElementsByName("textarea");
+    let lbNome = document.createElement("label");
+    let iptNome = document.createElement("input");
+    let lbModoPreparo = document.createElement("label");
+    let iptModoPreparo = document.createElement("input");
+    let txtIngredientes = document.createElement("textarea");
     
     // lbNome.textContent = "Nome da Receita: ";
     // iptNome.textContent = "";
