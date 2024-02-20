@@ -13,8 +13,12 @@ public class Calculadora {
         Float b = scan.nextFloat();
 
         float soma = a + b;
+        int c = 0;
+
+        boolean maior = (a > b) && (b > c);
 
         System.out.printf("a + b = %.2f", soma);
+        System.out.println(maior);
 
         scan.close();
     }
