@@ -25,13 +25,18 @@
             </article>
             <div id="corpoReceitas">
                 <label name="labelNome">Nome da Receita:</label>
-                <input name="inputNome" type="text">
+                <input name="inputNome" id="inputNome" type="text" placeholder="Nome Receita">
                 <label name="labelModoPreparo">Modo de Preparo:</label>
-                <input name="inputModoPreparo" type="text">
-                <textarea name="textarea" cols="30" rows="10"></textarea>
+                <input name="modoPreparo" id="modoPreparo" placeholder="Preparo"></input>
+                <div id="ingredientes">
+
+                </div>
             </div>
             <div>
-                <button onclick="cadastrarReceita()">+</button>
+                <button onclick="adicionarIngrediente()">+</button>
+            </div>
+            <div>
+                <button id="btnConcluirCadastro" onclick="concluirCadastro()">Concluir Cadastro</button>
             </div>
         </section>
         <section id="corpoPaginaPesquisa" style="display: none;">
