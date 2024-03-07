@@ -1,0 +1,11 @@
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.imgLogo{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 10px;
+}
