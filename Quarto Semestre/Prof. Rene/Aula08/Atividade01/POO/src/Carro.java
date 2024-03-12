@@ -69,8 +69,10 @@ public class Carro {
     }
 
     @Override
-    public String toString(){
-        return "Cor: %s --- Modelo: %s --- VelocidadeMáxima: %d --- Marca: %s \n".format( 
-            cor, modelo, velocidadeMaxima, marca);
-        }
+    public String toString() {
+        return "Carro [cor=" + cor + ", marca=" + marca + ", modelo=" + modelo + ", velocidadeMaxima="
+                + velocidadeMaxima + "]";
+    }
+
+    
 }

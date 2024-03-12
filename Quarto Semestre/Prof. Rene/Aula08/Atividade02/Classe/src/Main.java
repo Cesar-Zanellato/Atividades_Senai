@@ -3,7 +3,7 @@ public class Main {
         
         Pessoa cesar = new Pessoa("Cesar", 17, 60, 'M' );
         
-        Pessoa ciro = new Pessoa("Ciro",20, 70, 'M' );
+        Pessoa ciro = new Pessoa("Ciro", 20, 70, 'M' );
         
         Pessoa luigi = new Pessoa("Luigi", 20, 70, 'M' );
 
