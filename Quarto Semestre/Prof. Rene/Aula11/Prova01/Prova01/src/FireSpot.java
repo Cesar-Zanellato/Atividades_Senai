@@ -195,11 +195,11 @@ public class FireSpot {
     public String toString() {
 
         DateTimeFormatter formatterStart = DateTimeFormatter.ofPattern(
-                "dd/MM/yyyy HH:mm:ss");
+                "dd/MM/yyyy");
         String criacaoStringStart = formatterStart.format(start);
 
         DateTimeFormatter formatterEnd = DateTimeFormatter.ofPattern(
-                "dd/MM/yyyy HH:mm:ss");
+                "dd/MM/yyyy");
         String criacaoStringEnd = formatterEnd.format(end);
 
         return "FireSpot [start=" + criacaoStringStart + ", end=" + criacaoStringEnd + ", cause=" + cause + ", status=" + status
