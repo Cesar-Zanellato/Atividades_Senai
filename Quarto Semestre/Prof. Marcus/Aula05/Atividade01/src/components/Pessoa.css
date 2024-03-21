@@ -1,0 +1,16 @@
+.pessoaDivisoria{
+    border: 1px solid red;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;   
+    background-color: darkgray;
+    height: 30vh;
+    width: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+h2{
+    color:aqua
+}
