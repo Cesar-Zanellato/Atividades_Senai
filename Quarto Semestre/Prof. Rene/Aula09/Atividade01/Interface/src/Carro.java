@@ -22,6 +22,12 @@ public class Carro {
         this.ultimaRevisao = ultimaRevisao;
         this.criacao = criacao;
     };
+    public Carro(Cor cor, String marca, String modelo, Integer velocidadeMaxima){
+        this.cor = cor;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.velocidadeMaxima = velocidadeMaxima;
+    }
 
     public Cor getCor() {
         return cor;
