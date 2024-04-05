@@ -1,0 +1,146 @@
+Mostrar os Produtos cadastrados na tela principal: Quando o usuario estiver na tela principal do site, 
+puxar as informações do banco de dados e mostrar para o usuario as devidas informações dos produtos. 
+Sendo elas: A imagem do produto, O nome do produto, Uma pequena descrição do produto, O preço do pruduto, 
+caso tenha promoção e mostrar o valor da promoção e riscar o preço normal. 
+
+
+Cenario 01 Cenario Ideal de Funcionamento
+<------------------------------------------------------------------------>
+
+Cenario: Mostrar todas as informações do produto
+
+Ter um produto cadastrado do banco de dados
+
+Quando o usuario for para a tela principal
+
+Fazer as requisições para mostrar todas as informações do produto;
+
+
+Cenario 02 - Imagem Produto
+<------------------------------------------------------------------------>
+
+Cenario: O sistema não conseguiu achar a imagem do produto
+
+Ter um produto cadastrado no banco de dados
+
+Quando for feita a requisição para mostrar os produtos
+E
+O sistema não conseguiu achar a imagem
+Ou
+Não tem imagem cadastrada no produto
+
+Mostrar um imagem relacionada ao produto(exemplo: Pão de trigo, mostrar uma imagem relacionada a Padaria)
+
+
+Cenario 03 - Promoção Produto
+<------------------------------------------------------------------------>
+
+Cenario: O sistema não conseguiu achar se há promoção no produto
+
+Ter um produto cadastrado no banco de dados
+
+Quando for feita a requisição para mostrar os produtos
+E
+O no produto não tiver promoção no momento
+
+Mostrar somente o preço original do produto
+
+
+Cenario 04 - Descrição Produto
+<------------------------------------------------------------------------>
+
+Cenario: O sistema não conseguiu achar a descrição do produto
+
+Ter um produto cadastrado no banco de dados
+
+Quando for feita a requisição para mostrar os produtos
+E
+O sistema não conseguiu achar a descrição
+Ou
+O no produto não tiver descrição cadastrada
+
+Não mostrar nada no espaço desiginado para a descrição
+
+
+Cenario 05 - Preço Produto
+<------------------------------------------------------------------------>
+
+Cenario: O sistema não conseguiu achar o preço do produto
+
+Ter um produto cadastrado no banco de dados
+
+Quando for feita a requisição para mostrar os produtos
+E
+O sistema não conseguiu achar o preço do produto
+Ou
+O no produto não tiver o preço cadastrado
+
+Não mostrar o Produto 
+E 
+Mostrar um aviso na tela principal do ADM, avisando que o produto esta com erro no cadastro
+
+
+Cenario 06 - Nome Produto
+<------------------------------------------------------------------------>
+
+Cenario: O sistema não conseguiu achar o nome do produto
+
+Ter um produto cadastrado no banco de dados
+
+Quando for feita a requisição para mostrar os produtos
+E
+O sistema não conseguiu achar o nome do produto
+Ou
+O no produto não tiver o nome cadastrado
+
+Não mostrar o Produto 
+E 
+Mostrar um aviso na tela principal do ADM, avisando que o produto esta com erro no cadastro
+
+
+Cenario 07 - Estoque Produto
+<------------------------------------------------------------------------>
+
+Cenario: O sistema não conseguiu achar o estoque do produto
+
+Ter um produto cadastrado no banco de dados
+
+Quando for feita a requisição para mostrar os produtos
+E
+O sistema não conseguiu achar o estoque do produto
+
+Mostrar o Produto na tela principal
+E 
+Mostrar um aviso na tela principal do ADM, avisando que o produto esta com erro no cadastro
+
+
+Cenario 08 - Estoque Produto Negativo
+<------------------------------------------------------------------------>
+
+Cenario: O estoque do produto está negativo
+
+Ter um produto cadastrado no banco de dados
+
+Quando for feita a requisição para mostrar os produtos
+E
+O no produto em questão o estoque estiver negativo
+
+Não mostrar o Produto
+E 
+Mostrar um aviso na tela principal do ADM, avisando que o produto esta com erro de estoque
+
+
+Cenario 09 - Nenhum Produto Cadastrado
+<------------------------------------------------------------------------>
+
+Cenario: Não há nenhum produto cadastrado
+
+Não haver nunhum produto cadastrado no banco de dados
+
+Quando for feita a requisição para mostrar os produtos
+E
+O não houver produtos cadastrados no banco de dados
+
+Então desiginar o usuario para uma tela de Erro
+E 
+Mostrar um aviso na tela principal do ADM, avisando que não há produtos cadastrados no banco de dados

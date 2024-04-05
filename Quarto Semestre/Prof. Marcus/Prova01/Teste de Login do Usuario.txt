@@ -1,0 +1,46 @@
+Logar com um usuario: na pagina de login, conseguir logar com um usuario já criado
+Sendo as informações necessarias: Nome do usuario e senha;
+
+
+Cenario 01 Cenario Ideal de Funcionamento
+<------------------------------------------------------------------------>
+
+Cenario: O usuario preencheu todos os campos do Login
+
+Ter um usuario cadastrado no banco de dados
+E
+Estar na tela de Login
+
+Quando todos os campos do login estiverem preenchidos
+E
+Quando todos dados estiverem corretos
+E
+O usuario tentar finalizar o login
+
+Mostrar uma mensagem de login realizado
+E
+Direcionar o usuario para a tela principal;
+
+
+Cenario 02 Sem dados nos campos 
+<------------------------------------------------------------------------>
+
+Cenario: O usuario não preencheu todos os campos do Login corretamente
+
+Ter um usuario cadastrado no banco de dados
+E
+Estar na tela de Login
+
+Quando campo de nome no cadastro do produto estiver vazio
+Ou
+O campo de nome no cadastro do produto estiver com espaço em branco, mas não vazio
+Ou
+Quando campo de senha no cadastro do produto estiver vazio
+Ou
+O campo de senha no cadastro do produto estiver com espaço em branco, mas não vazio
+E
+O usuario tentar finalizar o login
+
+Mostrar uma mensagem de Erro no login
+E
+Esvaziar os campos do login;

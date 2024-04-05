@@ -1,0 +1,227 @@
+Cadastar um Produto como ADM: Quando logado com perfil de ADM, na tela de cadastro de produtos, cadastar algum produto.
+Sendo as informações necessarias: Nome do produto, Preço do produto, Se há promoção(Opcional, podendo ser alterado pelo ADM),
+Descrição do Produto, Imagem do produto, Categoria do produto, Subcategoria do produto e Estoque do Produto(Podendo ser alterado posteriormente pelo ADM). 
+
+
+Cenario 01 Cenario Ideal de Funcionamento
+<------------------------------------------------------------------------>
+
+Cenario: O ADM preencheu todos os campos do cadastro
+
+Estar logado como administrador
+E
+Estar na tela de Cadastro de Produtos
+
+Quando todos os campos de cadastro estiverem preenchidos
+E
+O administrador finalizar o cadastro
+
+Mostrar uma mensagem de Cadastro realizado
+E
+Adicionar o produto ao banco de dados;
+
+
+Cenario 02 Sem nome do Produto
+<------------------------------------------------------------------------>
+
+Cenario: O ADM não preencheu o campo de nome
+
+Estar logado como administrador
+E
+Estar na tela de Cadastro de Produtos
+
+Quando campo de nome no cadastro do produto estiver vazio
+Ou
+O campo de nome no cadastro do produto estiver com espaço em branco, mas não vazio
+E
+O administrador tentar finalizar o cadastro
+
+Mostrar uma mensagem de erro no cadastro
+E
+Não cadastrar o produto de banco de dados;
+
+
+Cenario 03 Sem Preço do Produto
+<------------------------------------------------------------------------>
+
+Cenario: O ADM não preencheu o campo de preço
+
+Estar logado como administrador
+E
+Estar na tela de Cadastro de Produtos
+
+Quando campo de preço no cadastro do produto estiver vazio
+Ou
+O campo de preço no cadastro do produto estiver com espaço em branco, mas não vazio
+E
+O administrador tentar finalizar o cadastro
+
+Mostrar uma mensagem de erro no cadastro
+E
+Não cadastrar o produto de banco de dados;
+
+
+Cenario 04 Sem Promoção do Produto
+<------------------------------------------------------------------------>
+
+Cenario: O ADM não preencheu o campo de promoção
+
+Estar logado como administrador
+E
+Estar na tela de Cadastro de Produtos
+
+Quando campo de promoção no cadastro do produto estiver vazio
+Ou
+O campo de promoção no cadastro do produto estiver com espaço em branco, mas não vazio
+E
+O administrador tentar finalizar o cadastro
+
+Mostrar uma mensagem de Cadastro realizado
+E
+Adicionar o produto ao banco de dados;
+
+
+Cenario 05 Sem Descrição do Produto
+<------------------------------------------------------------------------>
+
+Cenario: O ADM não preencheu o campo de descrição
+
+Estar logado como administrador
+E
+Estar na tela de Cadastro de Produtos
+
+Quando campo de descrição no cadastro do produto estiver vazio
+Ou
+O campo de descrição no cadastro do produto estiver com espaço em branco, mas não vazio
+E
+O administrador tentar finalizar o cadastro
+
+Mostrar uma mensagem de Cadastro realizado
+E
+Adicionar o produto ao banco de dados;
+
+
+Cenario 06 Sem Imagem do Produto e Sem Categoria
+<------------------------------------------------------------------------>
+
+Cenario: O ADM não adicionou uma imagem relacionada ao produto e não adicionou uma categoria ao produto
+
+Estar logado como administrador
+E
+Estar na tela de Cadastro de Produtos
+
+Quando campo da imagem no cadastro do produto estiver vazio
+Ou
+Quando campo de categoria no cadastro do produto estiver vazio
+Ou
+O campo de categoria no cadastro do produto estiver com espaço em branco, mas não vazio
+E
+O administrador tentar finalizar o cadastro
+
+Mostrar uma mensagem de erro no cadastro
+E
+Não cadastrar o produto de banco de dados;
+
+
+Cenario 07 Sem Imagem do Produto e Com Categoria
+<------------------------------------------------------------------------>
+
+Cenario: O ADM não adicionou uma imagem relacionada ao produto e não adicionou uma categoria ao produto
+
+Estar logado como administrador
+E
+Estar na tela de Cadastro de Produtos
+
+Quando campo da imagem no cadastro do produto estiver vazio
+Ou
+Quando campo de categoria no cadastro do produto estiver preenchido
+E
+O administrador tentar finalizar o cadastro
+
+Mostrar uma mensagem de Cadastro realizado
+E
+Adicionar uma imagem pré definida ao produto, de acordo com a categotia
+E
+Adicionar o produto ao banco de dados;
+
+
+Cenario 08 Sem Categoria do Produto
+<------------------------------------------------------------------------>
+
+Cenario: O ADM não preencheu o campo de categoria
+
+Estar logado como administrador
+E
+Estar na tela de Cadastro de Produtos
+
+Quando campo da categoria no cadastro do produto estiver vazio
+Ou
+O campo de categoria no cadastro do produto estiver com espaço em branco, mas não vazio
+E
+O administrador tentar finalizar o cadastro
+
+Mostrar uma mensagem de erro no cadastro
+E
+Não cadastrar o produto de banco de dados;
+
+
+Cenario 09 Sem Subcategoria do Produto
+<------------------------------------------------------------------------>
+
+Cenario: O ADM não preencheu o campo de subcategoria
+
+Estar logado como administrador
+E
+Estar na tela de Cadastro de Produtos
+
+Quando campo da subcategoria no cadastro do produto estiver vazio
+Ou
+O campo de subcategoria no cadastro do produto estiver com espaço em branco, mas não vazio
+E
+O administrador tentar finalizar o cadastro
+
+Mostrar uma mensagem de erro no cadastro
+E
+Não cadastrar o produto de banco de dados;
+
+
+Cenario 10 Sem Subcategoria do Produto Mas com a Categoria do Produto
+<------------------------------------------------------------------------>
+
+Cenario: O ADM não preencheu o campo de subcategoria
+
+Estar logado como administrador
+E
+Estar na tela de Cadastro de Produtos
+
+Quando campo da subcategoria no cadastro do produto estiver vazio
+Ou
+O campo de subcategoria no cadastro do produto estiver com espaço em branco, mas não vazio
+Ou
+Quando campo da categoria no cadastro do produto estiver preenchido
+E
+O administrador tentar finalizar o cadastro
+
+Mostrar uma mensagem de Cadastro realizado
+E
+Adicionar o produto ao banco de dados;
+
+
+Cenario 11 Sem Estoque do Produto
+<------------------------------------------------------------------------>
+
+Cenario: O ADM não preencheu o campo de estoque
+
+Estar logado como administrador
+E
+Estar na tela de Cadastro de Produtos
+
+Quando campo da estoque no cadastro do produto estiver vazio
+Ou
+O campo de estoque no cadastro do produto estiver com espaço em branco, mas não vazio
+E
+O administrador tentar finalizar o cadastro
+
+Mostrar uma mensagem de erro no cadastro
+E
+Não cadastrar o produto de banco de dados; 

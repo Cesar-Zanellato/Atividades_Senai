@@ -8,7 +8,8 @@ import lombok.Data;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
-@Entity @Data @NoArgsConstructor @AllArgsConstructor
+@Entity @Data 
+@NoArgsConstructor @AllArgsConstructor
 public class User {
     @Id
     private Long id;
