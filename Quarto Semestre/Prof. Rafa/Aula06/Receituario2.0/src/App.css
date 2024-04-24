@@ -1,0 +1,10 @@
+.btnsNavegacao{
+    margin: 10px 0px 10px 0px;
+}
+
+button{
+    height: 35px;
+    width: 100px;
+    margin-left: 20px;
+    border-radius: 5%;
+}
