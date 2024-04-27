@@ -46,12 +46,12 @@ function App() {
       <section className='btnsNavegacao'>
           <button onClick={() => { setPage(<BodyCadastroReceita/>) }}>Cadastrar</button>
           <button onClick={() => { setPage(<BodyPesquisarReceita/>) }}>Pesquisar</button>
-          <button onClick={() => { setPage(<BodyEditarReceita/>) }}>Excluir</button>
+          <button onClick={() => { setPage(<BodyEditarReceita/>) }}>Editar</button>
           <button onClick={() => { setPage(<BodyDeletarReceita/>) }}>Excluir</button>
       </section>
-      <section>
+      <body>
           {React.cloneElement(page, { receitas })}
-      </section>
+      </body>
     </main>
   );
 };

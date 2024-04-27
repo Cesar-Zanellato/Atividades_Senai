@@ -103,7 +103,7 @@ function BodyCadastroReceita(props){
                     <label>Unidade: </label>
                     <input type="text" className="inptNumber" value={inpIngUn3} onChange={tratarIngUn3}/>
                 </div>
-                <button onClick={cadastrarReceita}>Finalizar</button>
+                <button className="btnFinalizarCadastro" onClick={cadastrarReceita}>Finalizar</button>
             </section>
         </main>
     );

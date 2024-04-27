@@ -1,7 +1,3 @@
-
-.inptNumber{
-    width: 35px;
-}
 main section, h2, h3{
     margin-bottom: 10px;
     margin-left: 10px;
@@ -9,17 +5,28 @@ main section, h2, h3{
 main section{
     margin-left: 20px;
 }
-
-
 input, textarea{
     height: 20px;
+    max-height: 35px;
+    max-width: 170px;
     padding-left: 5px;
     border-radius: 10px;
     margin-right: 10px;
 }
-
-
+textarea{
+    min-width: 170px;
+}
+.inptNumber{
+    width: 35px;
+}
 .divIngrediente{
     margin-top: 10px;
 
+}
+.btnFinalizarCadastro{
+    margin: 20px;
+    color: black;
+    font-size: large;
+
+    background-color: rgb(34, 197, 34);
 }
