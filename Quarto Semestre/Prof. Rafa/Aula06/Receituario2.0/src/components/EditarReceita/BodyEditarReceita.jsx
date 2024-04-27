@@ -1,12 +1,9 @@
-import { useState } from "react";
-
 
 function BodyEditarReceita(){
 
-
     return(
         <main>
-            <h2>Editar Receita</h2>
+            <h1>Editar Receita</h1>
         </main>
     );
 };
