@@ -1,28 +1,35 @@
+function BodyPesquisarReceita(props) {
 
-function BodyPesquisarReceita(props){
-
-
-    return(
-        <main>
-            <h2>Pesquisar Receita</h2>
-            {props.receitas.map((receita, index) => (
-                <section key={index}>
-                    <label>Nome da Receita: {receita.nome}</label>
-                    <label>Modo de Preparo: {receita.modoDePreparo}</label>
-                    <h3>Ingredientes da Receita:</h3>
-                    <section className="ingredientesReceita">
-                        {receita.ingredientes.map((ingrediente, i) => (
-                            <div key={i} className="divIngrediente">
-                                <label>Nome do Ingrediente: {ingrediente.nome}</label>
-                                <label>Quantidade: {ingrediente.quantidade}</label>
-                                <label>Unidade: {ingrediente.unidade}</label>
-                            </div>
-                        ))}
-                    </section>
-                </section>
-            ))}
-        </main>
+    const editarReceita = (index, updatedRecipe) => {
+      props.atualizarReceita(index, updatedRecipe);
+    };
+  
+    const deletarReceita = (index) => {
+      props.deletarReceita(index);
+      console.log(props);
+    };
+  
+    return (
+      <div>
+        {props.receitas && props.receitas.map((receita, index) => (
+          <div key={index}>
+            <h3>{receita.nome}</h3>
+            <ul>
+              {receita.ingredientes.map((ingrediente, ingIndex) => (
+                <li key={ingIndex}>
+                  {ingrediente.quantidade} {ingrediente.unidade} de {ingrediente.nome}
+                </li>
+              ))}
+            </ul>
+            <p>{receita.modoDePreparo}</p>
+            <button onClick={() => editarReceita(index, receita)}>Editar</button>
+            <button onClick={() => deletarReceita(index)}>Deletar</button>
+          </div>
+        ))}
+      </div>
     );
-};
+  }
+  
+  export default BodyPesquisarReceita;
 
-export default BodyPesquisarReceita;
+
